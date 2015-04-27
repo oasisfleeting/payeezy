@@ -23,3 +23,45 @@ In the test account environment the TransArmor token is returned as random lette
 The original concept of the token meant that the merchant could not use this random number to perform a subsequent financial transaction, because it is not a valid PAN. However, a multi-pay token adds the ability to perform an authorized financial transaction under strict control measures within the merchant environment. The merchant submits a token that it already has on file for a specific consumer/card to First Data who accesses the vault to retrieve the PAN and complete the transaction. By using this type of token in the payment authorization process, the merchant reduces the risk of having the real PAN stolen as it is being collected from the consumer or stored by the merchant.
 
 Multi-pay tokens are especially valuable in eCommerce and other CNP environments that tend to store payment card information in a virtual wallet or on their website for repeat customers. The multi-pay token allows a merchant to tokenize the payment card information, associate that token with the consumer profile stored on the merchant side, and then use the token with the processor gateway that holds the token vault in order to run subsequent transactions. This is done without the need to prompt the customer for his card account number again, and without having to store the actual card number.
+
+
+# Environment	URL
+Sandbox                https://api-cert.payeezy.com/v1/securitytokens     
+Live	                 https://api.payeezy.com/v1/securitytokens
+
+
+Query Parameters					NameValue								Description
+apikey 								                                        
+(required)                                                                  
+                                    y6pWAJNyJyjGv66IsVuWnklkKUPFbb0a        This is used to identify the app.
+trtoken 							                                        
+(required)                                                                  
+                                                                            trtoken required to create Payeezy / Transarmor tokens
+callback 							y6pzAbc3Def123                          
+(required)                                                                  
+                                                                            JSONP callback function name
+type 								                                        
+(required)                          Payeezy.callback                        
+                                                                            Type of Token, possible values = payeezy / transarmor
+credit_card.type 					                                        
+(required)                          payeezy                                 
+                                                                            Type of card
+                                                                            
+credit_card.cardholder_name 		visa                                    
+(required)                                                                  
+                                                                            Name of the card holder
+                                    John Smith                              
+credit_card.card_number 			                                        
+(required)                                                                  
+                                    4788250000028291                        Card number
+                                                                            
+credit_card.exp_date 				                                        
+(required)                          1030                                    
+                                                                            Card Expiration (MMYY)
+                                                                            
+credit_card.cvv						123                                     What's this derp!
+(required)                                                                  
+                                                                            
+
+
+
