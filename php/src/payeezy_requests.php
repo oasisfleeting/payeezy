@@ -1,3 +1,5 @@
+<?php
+
 function processInvoice ($invoice, $payment) {
 		//$payment->getOrder()->sendNewOrderEmail();
 		$order = $payment->getOrder();
