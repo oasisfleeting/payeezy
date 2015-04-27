@@ -27,41 +27,36 @@ Multi-pay tokens are especially valuable in eCommerce and other CNP environments
 
 # Environment	URL
 Sandbox                https://api-cert.payeezy.com/v1/securitytokens     
-Live	                 https://api.payeezy.com/v1/securitytokens
 
-
-Query Parameters					NameValue								Description
+Query Parameters				NameValue								Description
 apikey 								                                        
 (required)                                                                  
-                                    y6pWAJNyJyjGv66IsVuWnklkKUPFbb0a        This is used to identify the app.
+                                y6pWAJNyJyjGv66IsVuWnklkKUPFbb0a        This is used to identify the app.
 trtoken 							                                        
 (required)                                                                  
                                                                             trtoken required to create Payeezy / Transarmor tokens
-callback 							y6pzAbc3Def123                          
+callback 						y6pzAbc3Def123                          
 (required)                                                                  
                                                                             JSONP callback function name
 type 								                                        
-(required)                          Payeezy.callback                        
+(required)                      Payeezy.callback                        
                                                                             Type of Token, possible values = payeezy / transarmor
 credit_card.type 					                                        
-(required)                          payeezy                                 
+(required)                      payeezy                                 
                                                                             Type of card
                                                                             
-credit_card.cardholder_name 		visa                                    
+credit_card.cardholder_name 	Visa                                    
 (required)                                                                  
-                                                                            Name of the card holder
-                                    John Smith                              
-credit_card.card_number 			                                        
-(required)                                                                  
-                                    4788250000028291                        Card number
                                                                             
-credit_card.exp_date 				                                        
+                                								
+credit_card.card_number 		John Smith									Name of the card holder	                                        
+(required)                                                                  
+                                                            
+                                                                            
+credit_card.exp_date 			4788250000028291						Card number			                                        
 (required)                          1030                                    
                                                                             Card Expiration (MMYY)
                                                                             
 credit_card.cvv						123                                     What's this derp!
 (required)                                                                  
                                                                             
-
-
-
